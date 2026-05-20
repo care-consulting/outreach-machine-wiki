@@ -1,0 +1,73 @@
+site_name: Outreach Machine Wiki
+site_description: Documentazione completa per Outreach Machine - Guida per utenti business
+site_author: CARE Consulting
+
+# Branding CARE Consulting
+theme:
+  name: material
+  logo: https://care-consulting.it/logo.png  # Adattare con logo CARE Consulting
+  favicon: https://care-consulting.it/favicon.ico
+  palette:
+    # Colori CARE Consulting - Adattare con brand colors
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+  font:
+    text: Roboto
+    code: Roboto Mono
+  language: it
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+
+# Navigation structure
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Primi Passi: getting-started.md
+  - Guida Utente:
+    - Lead Management: lead-management.md
+    - Campaigns: campaigns.md
+    - Email Automation: email-automation.md
+    - Analytics: analytics.md
+  - Supporto:
+    - FAQ: faq.md
+    - Troubleshooting: troubleshooting.md
+  - Strategie:
+    - Best Practices: best-practices.md
+
+# Search
+plugins:
+  - search:
+      lang: it
+
+# Extra configuration
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/CARE-Consulting/outreach-machine
+
+markdown_extensions:
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - attr_list
+  - codehilite
+  - toc:
+      toc_depth: 3
+
+# Footer
+copyright: Copyright &copy; 2026 CARE Consulting
