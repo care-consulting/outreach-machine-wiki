@@ -5,7 +5,7 @@ site_author: CARE Consulting
 # Branding CARE Consulting
 theme:
   name: material
-  logo: https://care-consulting.it/logo.png  # Adattare con logo CARE Consulting
+  logo: img/logo.svg
   favicon: https://care-consulting.it/favicon.ico
   palette:
     # Colori CARE Consulting - Adattare con brand colors
