@@ -231,8 +231,8 @@ A: Dipende dal numero: 100 lead = 1 minuto, 1000 lead = 5 minuti
 **D: Posso fare bulk update di note?**  
 A: Attualmente il bulk update funziona per status e campagna. Per note, edita uno per uno.
 
-**D: Che cosa significa "Tipo Buyer"?**  
-A: È una classificazione di chi deciderebbe l'acquisto (es: CTO, CFO, Founder).
+**D: Che cosa significa "Settore Azienda"?**  
+A: È il settore industriale dell'azienda del lead (es: Automotive, Chemicals, Technology, Finance, Healthcare).
 
 **D: Posso esportare i lead?**  
 A: Sì! Seleziona i lead, clicca "Esporta CSV"
