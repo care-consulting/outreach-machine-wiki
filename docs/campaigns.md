@@ -102,6 +102,88 @@ Contact l'amministratore - ha un tool speciale per unire campagne.
 
 ---
 
+## 🤖 Fit Score Automatico per Servizio
+
+Quando assegni un lead a una campagna che ha un **servizio associato**, il sistema calcola automaticamente il **Fit Score** - un punteggio di compatibilità tra il lead e il servizio.
+
+### Come Funziona
+
+```
+Lead assegnato a campagna + campagna ha servizio
+         ↓
+Sistema analizza automaticamente il lead
+         ↓
+Calcola Fit Score vs il servizio (0-100)
+         ↓
+Fit Score salvato e visualizzabile nel lead
+```
+
+### Cosa Succede Automaticamente
+
+Quando assegni uno o più lead a una campagna:
+
+1. ✅ **Assegnazione**: Lead vengono assegnati alla campagna
+2. 🤖 **Fit Score Auto-Calculate**: Se la campagna ha un servizio, il sistema triggera il calcolo
+3. 📊 **Risultati Salvati**: Fit score, confidence level e breakdown vengono salvati per ogni lead
+
+**Non devi fare nulla** – il sistema calcola tutto da solo in background!
+
+### Fit Score Levels
+
+| Score | Significato | Azione Consigliata |
+|-------|-----------|-----------------|
+| **70-100** | Altissima corrispondenza | 🟢 Contatta subito |
+| **50-69** | Buona corrispondenza | 🟡 Includi nel follow-up |
+| **30-49** | Corrispondenza moderata | 🔵 Valuta case-by-case |
+| **0-29** | Bassa corrispondenza | 🔴 Considera riassegnazione |
+
+### Confidence Level
+
+Ogni fit score include un **Confidence Level** (0-100):
+- **80-100**: Sistema molto sicuro della valutazione
+- **50-79**: Abbastanza sicuro, potrebbe migliorare con più info
+- **<50**: Lead sottoenricchito - consigliamo di aggiungere dettagli
+
+---
+
+## 💡 Suggerimenti Intelligenti Campagne
+
+Vuoi scoprire quale campagna è MIGLIORE per un lead? Usa la feature **Suggerisci Campagna**:
+
+```
+Hai un lead interessante ma non sai quale campagna è più adatta?
+         ↓
+Clicca "Suggerisci Campagna" nel lead
+         ↓
+Sistema analizza fit_score vs TUTTI i servizi
+         ↓
+Ti mostra:
+  🥇 Miglior campagna con fit_score
+  🥈 Alternativa 1
+  🥉 Alternativa 2
+```
+
+### Esempio
+
+```
+Lead: "Marco - CTO @ Startup Tech"
+
+Sistema consiglia:
+  🥇 Cloud Migration (Fit Score 85%)
+     "Altissima corrispondenza"
+  
+  🥈 Cybersecurity (Fit Score 52%)
+  
+  🥉 Team Augmentation (Fit Score 38%)
+```
+
+**Vantaggi**:
+- Scopri automaticamente i lead ideali per ogni servizio
+- Riassegna i lead a campagne migliori basandoti sui dati
+- Massimizza il ROI contattando i lead con miglior compatibilità
+
+---
+
 ## 📊 Analytics Campagna
 
 Dentro ogni campagna vedi i dati:
@@ -194,4 +276,4 @@ Soluzione: Potrebbe essere archiviata. Scorri in basso per vedere campagne archi
 
 ---
 
-[← Torna a Lead Management](lead-management) | [Email Automation →](email-automation)
+[← Torna a Lead Management](lead-management) | [Fit Score per Servizio →](fit-score) | [Email Automation →](email-automation)
