@@ -360,4 +360,4 @@ Soluzione:
 
 ---
 
-[← Torna a Campaigns](campaigns) | [Lead Management →](lead-management)
+[← Torna a Campaigns](campaigns) | [Email Automation →](email-automation)
