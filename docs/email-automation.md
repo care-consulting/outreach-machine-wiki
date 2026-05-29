@@ -219,6 +219,95 @@ A: Attualmente no, ma puoi mettere link a Drive/Dropbox nel corpo.
 
 ---
 
+## 📊 Monitora Follow-up Email
+
+### Come Vedere i Dati dei Follow-up
+
+Se hai una campagna con Step 1, Step 2, Step 3:
+
+1. Vai a **CAMPAIGNS**
+2. Clicca sulla tua campagna
+3. Clicca tab **EMAIL**
+4. Vedi tutti gli step con metriche separate
+
+### Metriche per Ogni Step
+
+Ogni step ha le sue metriche:
+
+**Step 1 (Primo contatto):**
+```
+📧 Sent: 12
+📨 Delivered: 11 (91%)
+💌 Opened: 4 (36%)
+🔗 Clicked: 2 (18%)
+📞 Replied: 1 (9%)
+❌ Bounced: 1
+```
+
+**Step 2 (Follow-up a 7 giorni):**
+```
+📧 Sent: 11 (solo chi non ha risposto a Step 1)
+📨 Delivered: 11 (100%)
+💌 Opened: 6 (55%) ← Spesso MIGLIORE di Step 1!
+🔗 Clicked: 3 (27%)
+📞 Replied: 2 (18%) ← Più persone rispondono qui
+```
+
+**Step 3 (Ultimo tentativo a 10 giorni):**
+```
+📧 Sent: 9 (solo chi non ha risposto a Step 1 e 2)
+📨 Delivered: 9 (100%)
+💌 Opened: 3 (33%)
+🔗 Clicked: 1 (11%)
+📞 Replied: 1 (11%)
+```
+
+### Interpretazione Dati Follow-up
+
+**Se Step 2 ha open rate più alto di Step 1:**
+✅ **Normale e positivo!** Il follow-up spesso ottiene più attenzione.
+- Motivo: Il lead ha visto il primo email ma era occupato, ora ha più tempo.
+- Azione: Mantieni lo stesso tono/tema per continuità.
+
+**Se Step 2 ha reply rate molto più alto:**
+✅ **Eccellente!** Significa il timing a 7 giorni è perfetto.
+- Il lead ha avuto tempo di considerare
+- L'urgenza gentile del follow-up funziona
+
+**Se Step 3 ha bassi numeri:**
+✅ **Atteso.** Chi non ha risposto a Step 1 e 2 spesso non risponde.
+- Azione: Considera se Step 3 vale la pena (dipende dal conversione rate)
+
+### Confronto Step per Prendere Decisioni
+
+**Domanda: Quale step è più efficace?**
+
+Confronta le metriche:
+
+```
+                Step 1    Step 2    Step 3
+Open Rate:      36%       55%       33%
+Reply Rate:      9%       18%       11%
+Bounce Rate:     8%        0%        0%
+```
+
+**Conclusione:** Step 2 è il più efficace (55% open, 18% reply).
+
+**Azione:** Se vuoi modificare il template, lavora sul Step 2 per massimizzare la risposta.
+
+### Quando i Follow-up Arrivano Davvero
+
+**Un punto importante:** Il sistema invia i follow-up **automaticamente** ai tempi esatti.
+
+Non serve controllare i log o fare nulla manualmente:
+- ✅ Day 0: Step 1 automaticamente inviato
+- ✅ Day 7: Step 2 automaticamente inviato (non devi fare nulla)
+- ✅ Day 10: Step 3 automaticamente inviato (non devi fare nulla)
+
+Puoi stare tranquillo che il timing è rispettato! 🎯
+
+---
+
 ## 🆘 Troubleshooting
 
 **Problema: Email non viene mandata all'ora indicata**  
