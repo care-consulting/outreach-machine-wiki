@@ -40,6 +40,30 @@ Goal: Book demos for product X
 
 ✅ La campagna è creata!
 
+### 💡 Bonus: Crea Buyer Personas Direttamente dalla Campagna
+
+Mentre stai creando la campagna, puoi aggiungere rapidamente nuove **buyer personas** senza uscire dal flusso:
+
+**Come funziona:**
+1. Durante la creazione della campagna, vedrai una sezione **"Nuova buyer persona"**
+2. Compila i campi:
+   - **Nome persona** *(es. "Mario, il consulente")*
+   - **Ruolo** *(es. "CEO", "Direttore Marketing")*
+3. Clicca **"Crea Persona"**
+4. Vedrai un'animazione ⚙️ **"Creando persona..."** mentre il sistema crea la persona in background
+
+**Dopo la creazione (Success State):**
+- Appare ✅ **"Persona creata!"** con i dettagli
+- Puoi scegliere di:
+  - **"Vai a Personas e modifica →"** - Vai al tab Personas per editare dettagli avanzati (tono, istruzioni, ecc.)
+  - **"Continua nella campagna"** - Rimani nella campagna e crea un'altra persona se vuoi
+
+**Vantaggi:**
+- ✅ Creare personas al volo senza interrompere il flusso di creazione campagna
+- ✅ Feedback visivo chiaro durante la creazione
+- ✅ La persona è subito disponibile nel sistema
+- ✅ Puoi continuare a creare altre personas o completare la campagna
+
 ---
 
 ## 📋 Visualizza Campagne
