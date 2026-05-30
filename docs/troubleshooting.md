@@ -435,6 +435,29 @@ Guida rapida per risolvere i problemi comuni su Outreach Machine.
 
 ---
 
+### Problema: Errore quando clicco su "Arricchimento" nella campagna
+**Cosa vedi:** Errore o la funzione non risponde quando cerchi di arricchire i lead
+
+**Cause possibili:**
+- Configurazione API non valida
+- Bug nell'endpoint di enrichment (RISOLTO in v1.2.4)
+- Workspace non ha permessi sufficienti
+
+**Soluzione:**
+1. **Aggiorna all'ultima versione** (Commit `a742749` o successivo)
+   - Il bug dei personas relationship è stato risolto
+   - Se sei su Vercel, il fix è già online
+2. Verifica che il workspace abbia permessi su campaigns e personas
+3. Se l'errore persiste, contatta supporto con:
+   - Nome del workspace
+   - Email del lead che stai cercando di arricchire
+   - Screenshot dell'errore
+
+**Nota Tecnica:**
+La feature di enrichment carica dati addizionali dai servizi Apollo e Tavily. Il processo è asincrono e può richiedere 10-30 secondi. Se vedi un errore immediato, è probabile che sia un issue di API.
+
+---
+
 ## 📞 Quando Contattare il Supporto
 
 Contatta il team se:
