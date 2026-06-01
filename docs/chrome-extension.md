@@ -127,8 +127,34 @@ Tutti i requests includono l'header: `x-api-key: {workspace_api_key}`
 - ✅ Generazione ZIP con API key personalizzata
 - ✅ Import da LinkedIn funzionante
 
+### Data: 2026-06-01 (Continuazione)
+
+**Problema risolto:** 3 vulnerabilità critiche di isolamento workspace
+
+**Soluzioni implementate:**
+
+1. **Correzione query settings in `/app/api/send/route.ts`**
+   - Problema: Email inviate con settings globali instead of workspace-specific
+   - Soluzione: Cambiato da `.eq('id', 'default')` a `.eq('workspace_id', email.workspace_id)`
+   - Impatto: Garantisce che ogni workspace usi i propri sender_email e brevo_api_key
+
+2. **Filtro workspace in `/app/api/campaigns/route.ts`**
+   - Problema: Campaign steps caricate globalmente senza filtro workspace
+   - Soluzione: Aggiunto `.eq('workspace_id', workspaceId)` alla query
+   - Impatto: Previene che step da altri workspaces siano visibili/accessibili
+
+3. **Rimozione fallback authentication in `/app/api/extension/route.ts`**
+   - Problema: Legacy code paths permettevano authentication senza workspace context
+   - Soluzione: Rimossi `authCheckFallback()` e `resolveWorkspaceId()`, only `authCheckV2()`
+   - Impatto: Elimina qualsiasi bypass di isolamento workspace
+
+**Deployment:**
+- Vercel ID: 910c958
+- Status: ✅ Live in production
+- All 3 fixes deployed simultaneously with single commit
+
 ---
 
-**Versione:** 1.0  
+**Versione:** 1.1  
 **Ultimo aggiornamento:** 2026-06-01  
 **Autore:** Sistema Outreach Machine
