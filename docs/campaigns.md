@@ -261,11 +261,11 @@ Crea campagne diverse per:
 4. Scala con più lead
 
 ### Follow-up Automatico (IMPORTANTE!)
-Il sistema invia **automaticamente** 3 email con timing preciso:
+Il sistema invia **automaticamente** fino a 3 email in sequenza, rispettando i delay configurati nella campagna:
 
 1. **Step 1 (Giorno 0)**: Prima email - Introduzione + problema
-2. **Step 2 (Giorno 7)**: Follow-up gentile - "Volevo riproporre..."
-3. **Step 3 (Giorno 10)**: Ultimo tentativo - "Ultima opportunità"
+2. **Step 2**: Follow-up gentile dopo il delay configurato dal Step 1
+3. **Step 3**: Ultimo tentativo dopo il delay configurato dal Step 2
 
 ⚠️ **Non devi fare nulla** - il sistema manda tutto automaticamente!
 
@@ -274,10 +274,10 @@ Il sistema invia **automaticamente** 3 email con timing preciso:
 Lunedì 1 Maggio @ 09:00
 └─ 📧 Step 1 inviato
 
-Lunedì 8 Maggio @ 09:00 (7 giorni dopo)
+Lunedì 8 Maggio @ 09:00 (delay configurato dopo Step 1)
 └─ 📧 Step 2 inviato automaticamente
 
-Giovedì 11 Maggio @ 09:00 (10 giorni dopo Step 1)
+Giovedì 11 Maggio @ 09:00 (delay configurato dopo Step 2)
 └─ 📧 Step 3 inviato automaticamente
 ```
 
@@ -294,7 +294,7 @@ Giovedì 11 Maggio @ 09:00 (10 giorni dopo Step 1)
 ### La Domanda Importante
 **"Può capitare che io riceva Step 1 e Step 2 lo stesso giorno?"**
 
-**Risposta: NO! ✅** Il sistema rispetta **sempre** i delay configurati.
+**Risposta: NO! ✅** Il sistema rispetta **sempre** i delay configurati e non invia piu email allo stesso lead nello stesso giorno.
 
 ### Timeline Garantita
 
@@ -308,21 +308,21 @@ Quando avvii una campagna con Step 1, Step 2 e Step 3:
 │                                                              │
 │ ┌──────────────────────────────────────────────────────────┐ │
 │ │ Step 2 già preparato dal sistema (in attesa)            │ │
-│ │ Sarà attivato quando Step 1 avrà raggiunto Giorno 7     │ │
+│ │ Sarà attivato quando Step 1 avrà raggiunto il suo delay │ │
 │ └──────────────────────────────────────────────────────────┘ │
 │                                                              │
 ├──────────────────────────────────────────────────────────────┤
-│ GIORNO 7                                                     │
-│ └─ 📧 Step 2 INVIATO AUTOMATICAMENTE (7 giorni dopo Step 1)  │
+│ GIORNO X                                                     │
+│ └─ 📧 Step 2 INVIATO AUTOMATICAMENTE (delay dopo Step 1)     │
 │                                                              │
 │ ┌──────────────────────────────────────────────────────────┐ │
 │ │ Step 3 già preparato dal sistema (in attesa)            │ │
-│ │ Sarà attivato quando Step 2 avrà raggiunto Giorno 10    │ │
+│ │ Sarà attivato quando Step 2 avrà raggiunto il suo delay │ │
 │ └──────────────────────────────────────────────────────────┘ │
 │                                                              │
 ├──────────────────────────────────────────────────────────────┤
-│ GIORNO 10                                                    │
-│ └─ 📧 Step 3 INVIATO AUTOMATICAMENTE (10 giorni dopo Step 1) │
+│ GIORNO Y                                                     │
+│ └─ 📧 Step 3 INVIATO AUTOMATICAMENTE (delay dopo Step 2)     │
 │                                                              │
 │ ✅ CAMPAGNA COMPLETATA                                       │
 └──────────────────────────────────────────────────────────────┘
@@ -337,19 +337,19 @@ Quando avvii una campagna:
    - Step 2: Marcato come "in attesa" ⏳
    - Step 3: Marcato come "in attesa" ⏳
 
-2. **Invio Step 1**: A 09:00, Step 1 viene inviato
+2. **Invio Step 1**: All'ora configurata nella campagna, Step 1 viene inviato
 
 3. **Preparazione Step 2**: Il sistema automaticamente prepara Step 2
-   - Lo attiva per il Giorno 7
+   - Lo attiva dopo il delay configurato da Step 1
    - Cambia stato da "in attesa" a "pronto"
 
-4. **Invio Step 2**: Al Giorno 7 @ 09:00, Step 2 viene inviato
+4. **Invio Step 2**: Quando arriva il suo momento, Step 2 viene inviato
 
 5. **Preparazione Step 3**: Il sistema automaticamente prepara Step 3
-   - Lo attiva per il Giorno 10
+   - Lo attiva dopo il delay configurato da Step 2
    - Cambia stato da "in attesa" a "pronto"
 
-6. **Invio Step 3**: Al Giorno 10 @ 09:00, Step 3 viene inviato
+6. **Invio Step 3**: Quando arriva il suo momento, Step 3 viene inviato
 
 ### Cosa Vedi nel Dashboard
 
@@ -363,12 +363,12 @@ Step 1
 
 Step 2  
 ├─ Status: SENT ✅
-├─ Sent At: 8 Maggio @ 09:00 (+7 giorni)
+├─ Sent At: 8 Maggio @ 09:00 (+delay dal Step 1)
 └─ Recipients: 12
 
 Step 3
 ├─ Status: SENT ✅
-├─ Sent At: 11 Maggio @ 09:00 (+10 giorni)
+├─ Sent At: 11 Maggio @ 09:00 (+delay dal Step 2)
 └─ Recipients: 12
 ```
 
@@ -396,7 +396,7 @@ Puoi controllare lo stato dei follow-up qui:
 - A/B testa i soggetti
 
 **❌ NON FARE:**
-- Non modificare i delay (7 e 10 giorni sono ottimali)
+- Imposta delay coerenti con il tuo ciclo commerciale
 - Non inviare step aggiuntivi manualmente (il sistema li manda automaticamente)
 - Non preoccuparti dei timing (il sistema se ne occupa)
 
@@ -407,22 +407,22 @@ Il sistema continua a seguire la timeline anche se il lead non apre/non risponde
 ```
 Lead IGNORA Step 1 (non aperto)
        ↓
-Step 2 arriva comunque al Giorno 7 (il sistema non aspetta)
+Step 2 arriva comunque quando il suo delay e il suo orario sono maturi
        ↓
 Se lead APRE Step 2, vedi nel tab EMAIL: "Opened" ✅
        ↓
-Se lead non risponde, Step 3 arriva comunque al Giorno 10
+Se lead non risponde, Step 3 arriva comunque quando matura dopo Step 2
 ```
 
 Non serve agire manualmente - il sistema invia tutto secondo il timing!
 
 ### Domande Frequenti sul Timing
 
-**D: Posso cambiare i delay (7 giorni, 10 giorni)?**  
-A: Attualmente no, sono fissi e ottimali per la maggior parte dei settori.
+**D: Posso cambiare i delay tra gli step?**  
+A: Si, i delay dipendono dalla configurazione della campagna.
 
 **D: E se un lead non apre Step 1?**  
-A: Step 2 arriva comunque al Giorno 7. Spesso il follow-up ottiene risposta anche da chi ignorato Step 1!
+A: Step 2 arriva comunque quando matura il suo delay. Spesso il follow-up ottiene risposta anche da chi ha ignorato Step 1.
 
 **D: E se un lead risponde a Step 1?**  
 A: Idealmente interrompi la campagna per quel lead (lo puoi fare manualmente). Altrimenti continua con Step 2 - di solito il lead lo ignora se già in conversazione.
@@ -431,7 +431,7 @@ A: Idealmente interrompi la campagna per quel lead (lo puoi fare manualmente). A
 A: Attualmente il sistema supporta 3 step. Se vuoi più follow-up, parla con l'admin.
 
 **D: A che ora vengono inviate le email?**  
-A: All'ora configurata nella campagna (default 09:00 IT time). Non cambia tra i giorni.
+A: All'ora configurata nella campagna, nel fuso orario del workspace. Non cambia tra i giorni.
 
 **D: Posso mandare i follow-up il weekend?**  
 A: No, il sistema salta automaticamente i weekend. Se Step 2 cade sabato, viene inviato lunedì.

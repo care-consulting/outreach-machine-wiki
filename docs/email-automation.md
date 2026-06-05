@@ -104,7 +104,7 @@ Clicca **"Salva Template"**
 2. Scegli:
    - **Data:** Quando vuoi inviare (es: 25 Maggio 2026)
    - **Ora:** A che ora (es: 9:00 AM)
-   - **Fuso orario:** Italia (UTC+2)
+   - **Fuso orario:** Quello configurato nel workspace
 
 **💡 Consigli:**
 - Invia durante ore di lavoro (9-11 AM, 14-16)
@@ -115,7 +115,7 @@ Clicca **"Salva Template"**
 1. Rivedi email e lead
 2. Clicca **"Conferma Invio"**
 
-✅ Le email partiranno all'ora indicata!
+✅ Le email partiranno all'ora indicata nel fuso orario del workspace.
 
 ---
 
@@ -244,7 +244,7 @@ Ogni step ha le sue metriche:
 ❌ Bounced: 1
 ```
 
-**Step 2 (Follow-up a 7 giorni):**
+**Step 2 (Follow-up):**
 ```
 📧 Sent: 11 (solo chi non ha risposto a Step 1)
 📨 Delivered: 11 (100%)
@@ -253,7 +253,7 @@ Ogni step ha le sue metriche:
 📞 Replied: 2 (18%) ← Più persone rispondono qui
 ```
 
-**Step 3 (Ultimo tentativo a 10 giorni):**
+**Step 3 (Ultimo tentativo):**
 ```
 📧 Sent: 9 (solo chi non ha risposto a Step 1 e 2)
 📨 Delivered: 9 (100%)
@@ -270,7 +270,7 @@ Ogni step ha le sue metriche:
 - Azione: Mantieni lo stesso tono/tema per continuità.
 
 **Se Step 2 ha reply rate molto più alto:**
-✅ **Eccellente!** Significa il timing a 7 giorni è perfetto.
+✅ **Eccellente!** Significa che il timing configurato per il follow-up sta funzionando bene.
 - Il lead ha avuto tempo di considerare
 - L'urgenza gentile del follow-up funziona
 
@@ -297,12 +297,12 @@ Bounce Rate:     8%        0%        0%
 
 ### Quando i Follow-up Arrivano Davvero
 
-**Un punto importante:** Il sistema invia i follow-up **automaticamente** ai tempi esatti.
+**Un punto importante:** Il sistema invia i follow-up **automaticamente** rispettando l'ora della campagna e i delay configurati.
 
 Non serve controllare i log o fare nulla manualmente:
 - ✅ Day 0: Step 1 automaticamente inviato
-- ✅ Day 7: Step 2 automaticamente inviato (non devi fare nulla)
-- ✅ Day 10: Step 3 automaticamente inviato (non devi fare nulla)
+- ✅ Step 2 automaticamente inviato dopo il delay configurato dal Step 1
+- ✅ Step 3 automaticamente inviato dopo il delay configurato dal Step 2
 
 Puoi stare tranquillo che il timing è rispettato! 🎯
 
@@ -311,7 +311,7 @@ Puoi stare tranquillo che il timing è rispettato! 🎯
 ## 🆘 Troubleshooting
 
 **Problema: Email non viene mandata all'ora indicata**  
-Soluzione: Verifica che sia stato confermato il scheduling. Controlla i log.
+Soluzione: Verifica che la campagna sia attiva, che la data/ora siano future e che il workspace abbia il fuso orario corretto nelle impostazioni.
 
 **Problema: Soggetto tronco nella email**  
 Soluzione: Fai il soggetto più corto (max 60 caratteri per mobile-friendly)

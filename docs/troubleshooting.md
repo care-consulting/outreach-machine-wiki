@@ -198,12 +198,12 @@ Guida rapida per risolvere i problemi comuni su Outreach Machine.
 
 **Cause possibili:**
 - Scheduling non è stato confermato (controlla i log)
-- Fuso orario sbagliato
+- Fuso orario workspace sbagliato
 - Permessi insufficienti
 
 **Soluzione:**
 1. Verifica che scheduling sia "Confermato"
-2. Controlla il fuso orario (Italia = UTC+2 d'estate, UTC+1 d'inverno)
+2. Controlla il fuso orario nelle impostazioni del workspace
 3. Vedi i log di invio per errori
 4. Riprova a schedularla
 
