@@ -62,6 +62,9 @@ A: **Pausa** = la campagna si ferma ma puoi riprenderla dopo. **Completa** = la 
 **D: Posso cambiare i lead di una campagna dopo averla creata?**  
 A: Sì! Clicca sulla campagna, modifica, aggiungi/rimuovi lead, salva.
 
+**D: Se duplico una campagna, vengono copiati anche i lead?**  
+A: No. La duplicazione copia la campagna e gli step, ma non i lead. Dopo la copia devi assegnare manualmente i lead dal tab Lead.
+
 **D: Qual è il reply rate medio che dovrei aspettarmi?**  
 A: Dipende dal settore, ma 5-15% è buono. 20%+ è eccellente!
 

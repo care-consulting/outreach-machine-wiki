@@ -177,6 +177,21 @@ Guida rapida per risolvere i problemi comuni su Outreach Machine.
 
 ---
 
+### Problema: Ho duplicato una campagna ma non vedo i lead
+**Cosa vedi:** La nuova campagna esiste, ma ha 0 lead
+
+**Cause possibili:**
+- Comportamento corretto del sistema
+- La duplicazione copia la campagna e gli step, ma non i lead
+
+**Soluzione:**
+1. Rinomina la nuova campagna
+2. Vai nel tab **Lead**
+3. Seleziona i lead che vuoi usare
+4. Assegnali manualmente alla campagna duplicata
+
+---
+
 ### Problema: Non posso mettere pausa a una campagna
 **Cosa vedi:** Bottone pausa disabilitato
 

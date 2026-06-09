@@ -108,6 +108,20 @@ Quando finisci una campagna:
 3. La campagna va in archivio
 4. Vedrai comunque i risultati
 
+### Duplica Campagna
+Quando duplichi una campagna:
+
+- viene copiata la campagna
+- vengono copiati anche gli step della sequenza
+- **i lead non vengono copiati**
+
+Dopo la duplicazione:
+1. Rinomina la nuova campagna
+2. Vai nel tab **Lead**
+3. Assegna manualmente i lead alla nuova campagna
+
+Il sistema mostra anche un promemoria con link diretto al tab **Lead**.
+
 ---
 
 ## 🔀 Consolidamento Campagne (Merge)
